@@ -8843,3 +8843,18 @@ java.util.concurrent.TimeoutException
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1665)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1598)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-10 22:12:50.326
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-10 22:12:50.332
+!MESSAGE classpath=94 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-10 22:12:50.341
+!MESSAGE buffering callback sts4.classpath.VNPeuKUC TodoApp-Backend false 94
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-10 22:12:50.341
+!MESSAGE executing callback sts4.classpath.VNPeuKUC 1 batched events
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2022-06-10 22:12:50.363
+!MESSAGE executing callback sts4.classpath.VNPeuKUC SUCCESS [done]

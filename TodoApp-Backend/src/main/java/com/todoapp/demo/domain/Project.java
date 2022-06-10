@@ -11,6 +11,10 @@ import javax.persistence.Id;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name = "projects")
@@ -19,18 +23,25 @@ public class Project {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	@Column(name = "project_name")
+	@NotBlank(message = "Tên project không thể để trống")
 	private String projectName;
-	@Column(name = "project_identifier")
+	@NotBlank(message = "Project identifier không thể để trống")
+	@Size(min = 3, max = 5 , message = "Phải nhỏ hơn 5 và lớn hơn 3" )
+	@Column(name = "project_identifier", updatable = false, unique = true)
 	private String projectIdentifer;
-
+	@NotBlank(message = "Description không thể để trống")
 	private String description;
 	@Column(name = "start_date")
+	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date startDate;
 	@Column(name = "end_date")
+	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date endDate;
 	@Column(name = "created_time")
+	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date createdTime;
 	@Column(name = "updated_time")
+	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date updatedTime;
 	//Getter and Setter
 	public Long getId() {
