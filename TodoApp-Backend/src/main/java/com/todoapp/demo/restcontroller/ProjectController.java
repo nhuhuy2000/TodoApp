@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.todoapp.demo.domain.Project;
+import com.todoapp.demo.service.MapValidationErrorService;
 import com.todoapp.demo.service.ProjectService;
 
 @RestController
@@ -21,20 +22,13 @@ import com.todoapp.demo.service.ProjectService;
 public class ProjectController {
 	@Autowired
 	private ProjectService projectService;
-	
+	@Autowired
+	private MapValidationErrorService mapValidationErrorService;
 	@PostMapping("")
 	public ResponseEntity<?> createProject( @RequestBody @Valid Project project, BindingResult result){
-		if(result.hasErrors()) {
-			HashMap<String, String> errors = new HashMap<>();
-			
-			result.getFieldErrors().forEach(
-					error -> errors.put(error.getField(), error.getDefaultMessage()));
-			String errorMessage = "";
-			for(String key : errors.keySet()) {
-				errorMessage += "Lỗi ở: " + key + " Lí do : " + errors.get(key) + "\n";
-			}
-			return new ResponseEntity<String>(errorMessage, HttpStatus.BAD_REQUEST);
-		}
+		ResponseEntity<?> errors = mapValidationErrorService.mapValidationService(result);
+		if(errors != null) return errors;
+		
 		Project savedProject = projectService.saveProject(project);
 		
 		return new ResponseEntity<Project>(savedProject, HttpStatus.CREATED);
