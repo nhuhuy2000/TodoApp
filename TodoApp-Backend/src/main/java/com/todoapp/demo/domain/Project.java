@@ -22,26 +22,26 @@ public class Project {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	@Column(name = "project_name")
 	@NotBlank(message = "Tên project không thể để trống")
+	@Column(name = "project_name")
 	private String projectName;
-	@NotBlank(message = "Project identifier không thể để trống")
-	@Size(min = 3, max = 5 , message = "Phải nhỏ hơn 5 và lớn hơn 3" )
-	@Column(name = "project_identifier", updatable = false, unique = true)
+	 @NotBlank(message ="Project Identifier is required")
+	    @Size(min=4, max=5, message = "Please use 4 to 5 characters")
+	    @Column(updatable = false, unique = true)
 	private String projectIdentifer;
 	@NotBlank(message = "Description không thể để trống")
 	private String description;
+	@JsonFormat(pattern = "yyyy-mm-dd")
 	@Column(name = "start_date")
-	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date startDate;
+	@JsonFormat(pattern = "yyyy-mm-dd")
 	@Column(name = "end_date")
-	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date endDate;
+	@JsonFormat(pattern = "yyyy-mm-dd")
 	@Column(name = "created_time")
-	@JsonFormat(pattern = "yyyy-mm-dd")
 	private Date createdTime;
-	@Column(name = "updated_time")
 	@JsonFormat(pattern = "yyyy-mm-dd")
+	@Column(name = "updated_time")
 	private Date updatedTime;
 	//Getter and Setter
 	public Long getId() {
@@ -135,3 +135,4 @@ public class Project {
 	}
 	
 }
+

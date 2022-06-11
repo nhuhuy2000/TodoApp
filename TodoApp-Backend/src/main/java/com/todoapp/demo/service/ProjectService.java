@@ -13,7 +13,7 @@ public class ProjectService {
 	private ProjectRepository projectRepository;
 	
 	public Project saveProject(Project project) {
-		Project savedProject = projectRepository.save(project);
-		return savedProject;
+		
+		return projectRepository.save(project);
 	}
 }
