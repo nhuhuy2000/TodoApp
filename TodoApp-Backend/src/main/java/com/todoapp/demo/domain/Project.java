@@ -26,8 +26,8 @@ public class Project {
 	@Column(name = "project_name")
 	private String projectName;
 	 @NotBlank(message ="Project Identifier is required")
-	    @Size(min=4, max=5, message = "Please use 4 to 5 characters")
-	    @Column(updatable = false, unique = true)
+	 @Size(min=4, max=5, message = "Please use 4 to 5 characters")
+	 @Column(updatable = false, unique = true)
 	private String projectIdentifer;
 	@NotBlank(message = "Description không thể để trống")
 	private String description;

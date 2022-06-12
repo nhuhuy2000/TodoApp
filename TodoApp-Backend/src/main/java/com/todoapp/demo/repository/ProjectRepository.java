@@ -12,5 +12,6 @@ public interface ProjectRepository extends JpaRepository<Project, Long> {
 	
 	List<Project> findAllById(Iterable<Long> iterable);
 	
+	public Project findByProjectIdentifer(String projectIdentifer);
 	
 }
