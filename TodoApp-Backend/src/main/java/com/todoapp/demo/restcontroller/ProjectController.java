@@ -62,6 +62,7 @@ public class ProjectController {
 			return errors;
 		}
 		Project project2 = projectService.getProjectByIdentifier(projectIdentifier);
+		
 		project2.setProjectName(project.getProjectName());
 		project2.setDescription(project.getDescription());
 		project2.setUpdatedTime(new Date());

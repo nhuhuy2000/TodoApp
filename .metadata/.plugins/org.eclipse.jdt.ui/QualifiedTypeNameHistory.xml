@@ -8,7 +8,6 @@
     <fullyQualifiedTypeName name="javax.persistence.PreUpdate"/>
     <fullyQualifiedTypeName name="org.springframework.data.repository.CrudRepository"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="com.todoapp.demo.service.ProjectService"/>
     <fullyQualifiedTypeName name="javax.validation.constraints.NotBlank"/>
@@ -18,7 +17,6 @@
     <fullyQualifiedTypeName name="javax.validation.constraints.NotNull"/>
     <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.todoapp.demo.service.MapValidationErrorService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ControllerAdvice"/>
@@ -32,11 +30,15 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="com.todoapp.demo.domain.Project"/>
     <fullyQualifiedTypeName name="com.todoapp.demo.exceptions.ProjectIdException"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="org.springframework.validation.BindingResult"/>
     <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="com.todoapp.demo.domain.Project"/>
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
 </qualifiedTypeNameHistroy>

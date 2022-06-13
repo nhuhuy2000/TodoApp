@@ -1,13 +1,13 @@
+import "./App.css";
 
-import './App.css';
-import Dashboard from './components/Dashboard';
-import Header from './components/Layout/Header';
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import TodoList from "./components/TodoList";
+import Navbar from "./components/Navbar";
 function App() {
   return (
     <div className="App">
-        <Header></Header>
-        <Dashboard></Dashboard>
+      <Navbar></Navbar>
+      <TodoList></TodoList>
     </div>
   );
 }

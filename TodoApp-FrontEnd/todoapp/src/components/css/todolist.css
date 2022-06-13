@@ -1,0 +1,16 @@
+.header{
+    height: 200px;
+    width: 100%;
+    background-color: #9ad2d8;
+    box-sizing: border-box;
+}
+.header h2{
+    padding: 50px 0px 10px 0px;
+}
+.header button{ 
+    background: #3e66f5;
+    border: none;
+    border-radius: 10px;
+    width: 145px;
+    color: white;
+}
